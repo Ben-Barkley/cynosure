@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-weight: 500;
+    
+    font-family: 'Courgette', cursive;
+    padding-left: 50px;
+    text-align: center;
+    color: blue;
+    padding-top: 10px;
+}
+.image > img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;  
+}
+
+/**Info**/
+#info{
+    background-color: rgb(246, 246, 246);
+    text-align: center;
+    font-size: large;
+    font-weight: 200;
+    line-height: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/**Meet Our Team**/
+#Team{
+background: white;
+
+}
+#Team >h2{
+    text-align: center;
+    padding-top: 5%;
+    color: blue;
+    font-family: 'Courgette', cursive;
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    line-height: 2rem;
+    padding-top: 50px;
+    gap: 4rem;
+    height: 50%;
+    
+    
+}
+.team__member-image > img{
+    height: 50vh; 
+}
+.team__member{
+    padding: 2rem;
+    border: 1px solid transparent;
+    background-color:rgba(4, 45, 75, 0.956) ;
+    transition: 2s;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    gap: 8rem;
+    
+}
+.team__member:hover {
+background: transparent;
+border-color: black;
+
+
+}
+.team__member-image img{
+    filter: saturate(0);
+}
+.team__member:hover img{
+    filter: saturate(1);
+}
+.team__member-info {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.team__member:hover .team__member-info{
+    color: black;
+    font-weight: 200;
+    font-family: 'Courgette';
+}
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(4, 45, 75, 0.956);
+    border-radius: 1rem 0 0 1rem;
+    transform: translateY(-50%);
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+
+}
+.team__member-socials a{
+    padding: 1rem;
+    color: white;
+}
+.team__member:hover .team__member-socials{
+    right: 0;
+    transition: 1s;
+}
+
+    
+@media screen and (max-width: 1024px) {
+    .team__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2px;
+        display:flex;
+        
+    }
+        .team__member{
+            padding: 0;
+        }
+        .team__member p{
+             margin-bottom: 1.5rem;
+        }
+    
+    
+}
+
